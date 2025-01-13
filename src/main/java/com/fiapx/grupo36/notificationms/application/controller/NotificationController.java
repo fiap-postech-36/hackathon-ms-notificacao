@@ -19,9 +19,8 @@ public class NotificationController {
     private final SendNotification sendNotification;
 
     @PostMapping
-    public ResponseEntity<EmailOutput> triggerEmail(@RequestBody @Valid EmailInput emailInput) {
-        var processId = sendNotification.execute(EmailMapper.INSTANCE.emailInputToEmail(emailInput))
-                .orElse(null);
+    public ResponseEntity<EmailOutput> triggerEmail(@RequestBody @Valid EmailInput emailInput)  {
+        var processId = sendNotification.execute(EmailMapper.INSTANCE.emailInputToEmail(emailInput)).orElse(null);
 
         return ResponseEntity.ok(processId);
     }
