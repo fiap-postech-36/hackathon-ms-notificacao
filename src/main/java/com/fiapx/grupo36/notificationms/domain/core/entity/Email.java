@@ -1,6 +1,5 @@
 package com.fiapx.grupo36.notificationms.domain.core.entity;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -8,6 +7,6 @@ import lombok.Getter;
 @AllArgsConstructor
 public class Email {
     private String recipient;
-    private String subject;
+    private SubjectType subject;
     private String body;
 }
