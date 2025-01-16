@@ -3,4 +3,4 @@ spring:
       name: notification-ms
 
 resend:
-  api-key: ${RESEND_TOKEN}
+  api-key: ${RESEND_TOKEN:""}
