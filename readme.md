@@ -73,18 +73,6 @@ http://localhost:8081
 }
 ```
 
-### Exemplo de Requisição com `curl`
-
-```bash
-curl -X POST http://localhost:8081/email \
--H "Content-Type: application/json" \
--d '{
-  "recipient": "jaded17204@pariag.com",
-  "subject": "Erro ao processar vídeo",
-  "body": "Olá, identificamos que houve erro ao processar seu vídeo 'SHREK 2', faça login em sua conta para ver mais detalhes"
-}'
-```
-
 ---
 
 ## Logs e Debug
