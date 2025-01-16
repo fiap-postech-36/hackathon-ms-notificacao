@@ -68,10 +68,14 @@ http://localhost:8081
 ```json
 {
   "recipient": "seuemail@fiap.com.br",
-  "subject": "Erro ao processar vídeo",
-  "body": "Olá, identificamos que houve erro ao processar seu vídeo"
+  "subject": "ERROR",
+  "body": "Olá, identificamos que houve erro ao processar seu vídeo 'SHREK 2', faça login em sua conta para ver mais detalhes"
 }
 ```
+
+**Observação:** O campo `subject` é um enum que pode assumir os valores:
+- `ERROR`: Indica que ocorreu um problema no processamento do vídeo.
+- `SUCCESS`: Indica que o vídeo foi processado com sucesso.
 
 ---
 
