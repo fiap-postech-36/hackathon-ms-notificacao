@@ -1,0 +1,9 @@
+spring:
+  application:
+      name: notification-ms
+
+server:
+  port: ${PORT:8080}
+
+resend:
+  api-key: ${RESEND_TOKEN}
