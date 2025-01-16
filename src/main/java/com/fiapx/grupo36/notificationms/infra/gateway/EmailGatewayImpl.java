@@ -26,7 +26,7 @@ public class EmailGatewayImpl implements NotificationGateway {
         CreateEmailOptions params = CreateEmailOptions.builder()
                 .from("FiapX <contato@samuelmteixeira.dev>")
                 .to(email.getRecipient())
-                .subject(email.getSubject())
+                .subject(email.getSubject().getValue())
                 .text(email.getBody())
                 .build();
 

@@ -1,4 +1,6 @@
 package com.fiapx.grupo36.notificationms.application.gates;
 
-public record EmailInput(String recipient, String subject, String body) {
+import com.fiapx.grupo36.notificationms.domain.core.entity.SubjectType;
+
+public record EmailInput(String recipient, SubjectType subject, String body) {
 }
