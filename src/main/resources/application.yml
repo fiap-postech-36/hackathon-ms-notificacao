@@ -1,4 +1,9 @@
 spring:
+  rabbitmq:
+    host: ${RABBIT_HOST:localhost}
+    port: 5672
+    username: ${RABBIT_USER:ulysses}
+    password: ${RABBIT_PASSWORD:senha123}
   application:
       name: notification-ms
 
