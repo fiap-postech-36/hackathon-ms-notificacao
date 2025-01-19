@@ -30,9 +30,12 @@ services:
     ports:
       - "8081:8080"
     environment:
-      - RESEND_TOKEN=seu_token_resend
+       - RESEND_TOKEN=re_token12345678
+       - RABBIT_USER=username
+       - RABBIT_PASSWORD=password
+- 
 ```
-Substitua `seu_token_resend` pelo seu token da API Resend.
+Substitua `seu_token_resend` pelo seu token da API Resend e defina as credenciais do rabbitMQ.
 
 ### 3. Construir e Iniciar o Container
 
