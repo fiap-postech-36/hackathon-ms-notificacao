@@ -19,7 +19,7 @@ public class NotificationController {
     private final SendNotification sendNotification;
 
     @PostMapping
-    public ResponseEntity<EmailOutput> triggerEmail(@RequestBody @Valid EmailInput emailInput)  {
+    public ResponseEntity<EmailOutput> triggerEmail(@RequestBody @Valid EmailInput emailInput) {
         var email = EmailMapper.INSTANCE.emailInputToEmail(emailInput);
         var id = sendNotification.execute(email).orElse(null);
 

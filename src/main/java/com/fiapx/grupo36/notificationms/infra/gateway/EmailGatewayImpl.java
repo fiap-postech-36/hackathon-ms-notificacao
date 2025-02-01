@@ -1,7 +1,6 @@
 package com.fiapx.grupo36.notificationms.infra.gateway;
 
 import com.fiapx.grupo36.notificationms.domain.core.entity.Email;
-import com.fiapx.grupo36.notificationms.domain.core.gateway.NotificationGateway;
 import com.resend.Resend;
 import com.resend.core.exception.ResendException;
 import com.resend.services.emails.model.CreateEmailOptions;
@@ -14,13 +13,13 @@ import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor
-public class EmailGatewayImpl implements NotificationGateway {
+public class EmailGatewayImpl implements EmailSender {
 
     @Value("${resend.api-key}")
     private String resendToken;
 
     @Override
-    public Optional<String> send(Email email) {
+    public Optional<String> sendEmail(Email email) {
         Resend resend = new Resend(resendToken);
 
         CreateEmailOptions params = CreateEmailOptions.builder()
