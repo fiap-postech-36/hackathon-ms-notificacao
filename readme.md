@@ -1,6 +1,6 @@
 # Notification Microservice
 
-Este é um microserviço responsável pelo envio de notificações por e-mail.
+Este é um microserviço responsável pelo envio de notificações por e-mail que é acionado pelo RabbitMQ.
 
 ## Tecnologias Utilizadas
 
@@ -30,12 +30,11 @@ services:
     ports:
       - "8081:8080"
     environment:
-       - RESEND_TOKEN=re_token12345678
-       - RABBIT_USER=username
-       - RABBIT_PASSWORD=password
-- 
+      - RESEND_TOKEN=re_token12345678
+      - RABBIT_USER=username
+      - RABBIT_PASSWORD=password
 ```
-Substitua `seu_token_resend` pelo seu token da API Resend e defina as credenciais do rabbitMQ.
+Substitua `seu_token_resend` pelo seu token da API Resend, também defina o usuário e senha do rabbitMQ conforme o exemplo acima.
 
 ### 3. Construir e Iniciar o Container
 
