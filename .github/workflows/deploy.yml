@@ -51,4 +51,4 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
           repository: ${{ secrets.DOCKER_USER }}/${{ secrets.IMAGE_NAME }}
           short-description: ${{ github.event.repository.description }}
-          readme-filepath: ./README.md
+          readme-filepath: ./readme.md
