@@ -36,7 +36,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}    # Your SonarCloud token
         run: |
           mvn -B clean verify sonar:sonar \
-          -Dsonar.projectKey=fiap-postech-36_hackathon-ms-notificacao \
+          -Dsonar.projectKey=fiap-postech-36_notification-ms \
           -Dsonar.coverage.exclusions=**/domain/**,**/*Output.java,**/*Config.java \
           -Dsonar.organization=fiap-postech-36 \
           -Dsonar.host.url=https://sonarcloud.io \
